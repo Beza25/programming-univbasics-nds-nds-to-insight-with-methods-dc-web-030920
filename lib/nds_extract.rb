@@ -6,7 +6,7 @@ require "pry"
 # using director_data as input
 
 def gross_for_director(director_data)
-    # pp director_data
+    pp director_data
 
   row = 0
   total = 0 
