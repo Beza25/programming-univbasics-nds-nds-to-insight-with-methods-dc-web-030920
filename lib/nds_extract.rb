@@ -43,7 +43,7 @@ def directors_totals(nds)
   while row_index < nds.length do
     # the key for the hash reuslt
     name = nds[row_index][:name]
-    puts name
+ 
     
 
     # value = total_of_worldwide_grosses (nds)
