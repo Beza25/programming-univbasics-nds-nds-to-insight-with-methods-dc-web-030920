@@ -6,28 +6,17 @@ require "pry"
 # using director_data as input
 
 def gross_for_director(director_data)
-   pp director_data
+    # pp director_data
 
   row = 0
+  total = 0 
   
-  while row < director_data.length do
-    total = 0 
-    inner_row = 0
-      
-    
-    while inner_row  < director_data[row][:movies].length do
-      total += director_data[row][:movies][inner_row][:worldwide_gross]
-      inner_row += 1
-    end
-    total
-    row += 1 
-  end
-  
+  while row < director_data[:movies].length do 
+    total += director_data[:movies][row][: :worldwide_gross ]
+    row +=1
+  end 
+  total
 end
-
-
-
-
 
 # Write a method that, given an NDS creates a new Hash
 # The return value should be like:
@@ -44,13 +33,10 @@ def directors_totals(nds)
     # the key for the hash reuslt
     name = nds[row_index][:name]
  
-    
-
     # value = total_of_worldwide_grosses (nds)
     result[name] = total_of_worldwide_grosses(nds, row_index )
     row_index += 1
   end
-  puts result
   result
 end
 
