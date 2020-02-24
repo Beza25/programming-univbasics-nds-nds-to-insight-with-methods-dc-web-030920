@@ -11,7 +11,7 @@ def gross_for_director(director_data)
   row = 0
   total = 0 
   
-  director_data[:movies] { |movie|
+  director_data[:movies].validates_each { |movie|
     total +=  movie[:worldwide_gross ]
    
     
